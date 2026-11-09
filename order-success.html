@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>نتیجهٔ سفارش | فروشگاه من</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="order-success.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <a class="logo" href="index.html">فروشگاه من</a>
+    </header>
+
+    <main class="container order-success-page">
+      <section class="order-success-panel">
+        <h1 id="order-page-title" tabindex="-1">نتیجهٔ سفارش</h1>
+
+        <p id="order-success-message" role="status" aria-live="polite">
+          در حال بررسی اطلاعات سفارش...
+        </p>
+
+        <div id="order-details" hidden>
+          <p>
+            شناسه سفارش:
+            <strong id="order-id"></strong>
+          </p>
+
+          <p>
+            نام سفارش‌دهنده:
+            <strong id="order-customer"></strong>
+          </p>
+
+          <p>
+            مبلغ سفارش:
+            <strong id="order-total"></strong>
+          </p>
+        </div>
+
+        <a class="primary-button" href="index.html"> بازگشت به فروشگاه </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">پروژه آموزشی فرانت‌اند</footer>
+  </body>
+</html>

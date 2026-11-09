@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>فروشگاه من</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="products.js" defer></script>
+    <script src="api.js" defer></script>
+    <script src="cart.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="index.html">فروشگاه من</a>
+
+      <a class="cart-link" href="#cart">
+        سبد خرید
+        <span id="cart-count">۰</span>
+      </a>
+    </header>
+
+    <p id="api-status" role="status" aria-live="polite" hidden></p>
+
+    <main class="container">
+      <section class="intro">
+        <h1>محصولات فروشگاه</h1>
+        <p>محصول موردنظرت را پیدا کن و به سبد خرید اضافه کن.</p>
+      </section>
+
+      <section class="toolbar" aria-label="جست‌وجو و فیلتر محصولات">
+        <label for="search">جست‌وجوی محصول</label>
+        <input id="search" type="search" placeholder="مثلاً هدفون" />
+
+        <label for="category">دسته‌بندی</label>
+        <select id="category">
+          <option value="all">همه محصولات</option>
+          <option value="audio">صوتی</option>
+          <option value="accessories">لوازم جانبی</option>
+          <option value="storage">حافظه</option>
+          <option value="beauty">زیبایی و مراقبت</option>
+          <option value="fragrances">عطر و ادکلن</option>
+          <option value="furniture">خانه و مبلمان</option>
+          <option value="groceries">مواد غذایی</option>
+        </select>
+
+        <label for="sort">مرتب‌سازی قیمت</label>
+        <select id="sort">
+          <option value="default">پیش‌فرض</option>
+          <option value="low">ارزان‌تر</option>
+          <option value="high">گران‌تر</option>
+        </select>
+      </section>
+      <p id="cart-storage-message" role="status" aria-live="polite" hidden></p>
+      <div class="layout">
+        <section class="catalog" aria-labelledby="catalog-title">
+          <h2 id="catalog-title">فهرست محصولات</h2>
+          <p id="result-count" role="status" aria-live="polite"></p>
+          <div id="products" class="product-grid"></div>
+        </section>
+
+        <aside id="cart" class="cart-panel" aria-labelledby="cart-title">
+          <h2 id="cart-title">سبد خرید</h2>
+          <div id="cart-items"></div>
+
+          <div class="cart-total">
+            <span>مجموع</span>
+            <strong id="cart-total">۰ تومان</strong>
+          </div>
+
+          <button id="clear-cart" class="secondary-button">
+            خالی کردن سبد
+          </button>
+
+          <a id="checkout-link" class="primary-button" href="checkout.html">
+            ادامه و ثبت سفارش
+          </a>
+          <p class="notice">این نسخه آزمایشی است و پرداخت واقعی ندارد.</p>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">پروژه آموزشی فرانت‌اند</footer>
+  </body>
+</html>

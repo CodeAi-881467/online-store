@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ثبت سفارش | فروشگاه من</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="products.js" defer></script>
+    <script src="cart.js" defer></script>
+    <script src="checkout.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <a class="logo" href="index.html">فروشگاه من</a>
+    </header>
+
+    <main class="container checkout-page">
+      <section class="intro">
+        <h1>ثبت سفارش</h1>
+        <p>اطلاعات سفارش خود را بررسی و تکمیل کنید.</p>
+      </section>
+
+      <section class="checkout-summary">
+        <h2>خلاصه سفارش</h2>
+        <div id="checkout-items"></div>
+
+        <div class="cart-total">
+          <span>مجموع سفارش</span>
+          <strong id="checkout-total">۰ تومان</strong>
+        </div>
+      </section>
+
+      <section class="checkout-form-section">
+        <h2>اطلاعات سفارش‌دهنده</h2>
+
+        <p id="checkout-message" role="status" aria-live="polite"></p>
+
+        <form id="checkout-form" novalidate>
+          <label for="customer-name">نام و نام خانوادگی</label>
+          <input
+            id="customer-name"
+            name="customerName"
+            type="text"
+            autocomplete="name"
+            minlength="3"
+            maxlength="80"
+            required
+            aria-describedby="name-error"
+          />
+          <p id="name-error" class="field-error" aria-live="polite"></p>
+
+          <label for="customer-phone">شماره تماس</label>
+          <input
+            id="customer-phone"
+            name="phone"
+            type="tel"
+            autocomplete="tel"
+            required
+            aria-describedby="phone-error"
+          />
+          <p id="phone-error" class="field-error" aria-live="polite"></p>
+
+          <label for="customer-address">نشانی</label>
+          <textarea
+            id="customer-address"
+            name="address"
+            rows="4"
+            autocomplete="street-address"
+            minlength="10"
+            maxlength="500"
+            required
+            aria-describedby="address-error"
+          ></textarea>
+          <p id="address-error" class="field-error" aria-live="polite"></p>
+
+          <button type="submit" class="primary-button">
+            ثبت سفارش آزمایشی
+          </button>
+        </form>
+      </section>
+
+      <a href="index.html">بازگشت به فروشگاه</a>
+    </main>
+
+    <footer class="site-footer">پروژه آموزشی فرانت‌اند</footer>
+  </body>
+</html>
